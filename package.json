@@ -37,6 +37,7 @@
     "testcafe": "^0.16.2"
   },
   "scripts": {
+    "dev": "node ./src/server",
     "lint": "eslint --ext .js, app config views server.js",
     "lint:fix": "eslint --ext .js, app config views server.js --fix",
     "test": "npm run test:server:unit && npm run test:client:e2e",
