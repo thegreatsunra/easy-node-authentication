@@ -36,5 +36,9 @@
     "passport-google-oauth": "^1.0.0",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js, app config views server.js",
+    "lint:fix": "eslint --ext .js, app config views server.js --fix"
   }
 }
