@@ -29,11 +29,12 @@ app.use(cookieParser()) // read cookies (needed for auth)
 app.use(bodyParser.json()) // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.set('views', './src/server/views')
 app.set('view engine', 'ejs') // set up ejs for templating
 
 // required for passport
 app.use(session({
-  secret: 'ilovescotchscotchyscotchscotch', // session secret
+  secret: 'totallydifferentsecretthantheoriginal', // session secret
   resave: true,
   saveUninitialized: true
 }))
@@ -42,7 +43,7 @@ app.use(passport.session()) // persistent login sessions
 app.use(flash()) // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
-require('./app/routes.js')(app, passport) // load our routes and pass in our app and fully configured passport
+require('./routes.js')(app, passport) // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
 app.listen(port)
