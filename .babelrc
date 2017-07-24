@@ -1,0 +1,27 @@
+{
+  "comments": false,
+  "presets": [
+    "babili",
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 10"]
+      }
+    }],
+    "stage-0"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "babili",
+        "env",
+        "stage-0"
+      ],
+      "plugins": ["istanbul"]
+    }
+  },
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-runtime"
+  ]
+}
