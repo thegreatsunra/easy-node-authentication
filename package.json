@@ -38,6 +38,13 @@
   },
   "scripts": {
     "lint": "eslint --ext .js, app config views server.js",
-    "lint:fix": "eslint --ext .js, app config views server.js --fix"
+    "lint:fix": "eslint --ext .js, app config views server.js --fix",
+    "test": "npm run test:server:unit && npm run test:client:e2e",
+    "test:client": "npm run test:client:e2e",
+    "test:client:e2e": "node test/client/e2e/runner.js chrome,safari,firefox test/client/e2e/specs",
+    "test:e2e": "npm run test:client:e2e",
+    "test:server": "npm run test:server:unit",
+    "test:server:unit": "jest ./test/server/unit/specs",
+    "test:unit": "npm run test:server:unit"
   }
 }
