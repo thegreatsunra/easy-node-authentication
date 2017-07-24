@@ -1,7 +1,6 @@
 {
   "comments": false,
   "presets": [
-    "babili",
     ["env", {
       "modules": false,
       "targets": {
@@ -13,7 +12,6 @@
   "env": {
     "test": {
       "presets": [
-        "babili",
         "env",
         "stage-0"
       ],
